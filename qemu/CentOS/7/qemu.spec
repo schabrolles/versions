@@ -37,7 +37,7 @@
 
 %if 0%{?rhel}
 # RHEL-specific defaults:
-%bcond_with    kvmonly          # enabled
+%bcond_without kvmonly          # enabled
 %bcond_without exclusive_x86_64 # enabled
 %bcond_without rbd              # enabled
 %bcond_without spice            # enabled
@@ -47,7 +47,7 @@
 #bcond_without gtk              # disabled
 %else
 # General defaults:
-%bcond_with    kvmonly          # disabled
+%bcond_without kvmonly          # disabled
 %bcond_with    exclusive_x86_64 # disabled
 %bcond_without rbd              # enabled
 %bcond_without spice            # enabled
